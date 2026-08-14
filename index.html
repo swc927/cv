@@ -1,20 +1,33 @@
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-    </head>
-    <body>
-        
-<form action="mailto:siuwengchun@gmail.com" method="post" enctype="text/plain">
-    <label>Your Name:</label>
-    <input type="text" name="YourName" id="">
-   <br><label for="">Message</label>
-   <br><textarea name="YourMessage" id="" rows="5" cols="30"></textarea>
-   <br><input type="submit" name="" id="">
-</form>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Send a message to SWC using your email app.">
+    <title>Contact SWC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="swc-ui.css">
+  </head>
+  <body>
+    <main class="contact-shell">
+      <header>
+        <h1>Contact SWC</h1>
+        <p>Write your message below. Submitting opens your email app so you remain in control.</p>
+      </header>
 
+      <form class="contact-form" action="mailto:siuwengchun@gmail.com" method="post" enctype="text/plain">
+        <div class="field">
+          <label for="contactName">Your name</label>
+          <input id="contactName" type="text" name="YourName" autocomplete="name" required>
+        </div>
 
+        <div class="field">
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="YourMessage" rows="7" required></textarea>
+        </div>
 
-    </body>
+        <button type="submit">Open in email app</button>
+      </form>
+    </main>
+  </body>
 </html>
